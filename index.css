@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    color: #eee;
+}
+
+body {
+    background-color: #111;
+    width: 100%;
+    max-width: calc(min(80ch, round(down, 100%, 1ch)));
+    margin: auto;
+    padding: 1.2rem 2ch;
+}
+
+header {
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+ul {
+    list-style-type: square;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+h3 {
+    margin-top: 2.4rem;
+}
+
+.icon-list,
+.icon-list-2 {
+    display: grid;
+    width: fit-content;
+    gap: 64px;
+    margin: 2.4rem auto;
+}
+
+.icon-list {
+    grid-template-columns: repeat(4, 128px);
+}
+
+.icon-list-2 {
+    grid-template-columns: repeat(5, 96px);
+}
+
+.caption {
+    color: #777;
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+}
+
+.exp-title {
+    grid-area: title;
+}
+
+.exp-date {
+    grid-area: date;
+}
+
+.exp-job {
+    grid-area: job;
+}
+
+.exp-points {
+    grid-area: points;
+}
+
+.exp-tech {
+    grid-area: tech;
+}
+
+.exp-container {
+    display: grid;
+    border: 1px solid #eee;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title title title title"
+    "job job date date"
+    "tech tech points points"
+    "tech tech points points";
+}
+
+.exp-container > div {
+    border: solid 1px #eee;
+    padding: 0 10px;
+}
